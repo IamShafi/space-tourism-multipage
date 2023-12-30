@@ -1,9 +1,7 @@
-import type { Metadata } from 'next'
-// import { Inter } from 'next/font/google'
-import './globals.css'
+import Navbar from "@/components/Navbar";
+import "./globals.css";
 import { Bellefair, Barlow_Condensed } from "next/font/google";
-import Navbar
- from '@/components/Navbar';
+
 const bellefair = Bellefair({
   subsets: ["latin"],
   weight: "400",
@@ -19,6 +17,7 @@ export const metadata = {
   title: "SpaceShip WebSite",
   description: "develop by DearBoy",
 };
+
 export default function RootLayout({
   children,
 }: {
@@ -33,4 +32,3 @@ export default function RootLayout({
     </html>
   );
 }
-
