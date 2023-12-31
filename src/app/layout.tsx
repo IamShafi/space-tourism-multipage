@@ -14,8 +14,8 @@ const barlow = Barlow_Condensed({
 });
 
 export const metadata = {
-  title: "SpaceShip WebSite",
-  description: "develop by DearBoy",
+  title: "Space-tourism -Multipage",
+  description: "React, Tailwind, Typescript, Nextjs",
 };
 
 export default function RootLayout({
