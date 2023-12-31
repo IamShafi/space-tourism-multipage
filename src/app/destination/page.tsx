@@ -53,6 +53,7 @@ const planets = [
 
 function DestinationPage() {
   const [actual, setActual] = useState(0);
+  // npm i @mantine/hooks
   const previous = usePrevious(actual);
 
   const planet = useMemo(() => planets[actual], [actual]);
