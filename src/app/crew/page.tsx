@@ -85,12 +85,16 @@ function CrewPage() {
               {member.description}{" "}
             </p>
           </div>
+          {/* flex container for circle navigation */}
           <div className="flex gap-x-6 my-8 justify-center lg:justify-start">
+            {/* map over crew, on click set actual index, add active class to div  */}
             {members.map(({ name }, index) => (
               <div
                 onClick={() => setActual(index)}
                 key={index}
-                className={`w-3 aspect-square rounded-full transition cursor-pointer opacity-40 bg-white [&.active]:opacity-100 [&:not(.active)]:hover:opacity-75 ${
+                className={`w-3 aspect-square rounded-full transition cursor-pointer opacity-40 bg-white 
+                [&.active]:opacity-100 [&:not(.active)]:hover:opacity-75 
+                ${
                   member.name === name && "active"
                 }`}
               />
