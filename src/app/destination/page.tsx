@@ -57,6 +57,7 @@ function DestinationPage() {
   const previous = usePrevious(actual);
 
   const planet = useMemo(() => planets[actual], [actual]);
+
   const variant = useMemo(() => {
     if (previous === undefined) return SLIDE_RIGHT;
     if (actual > previous) return SLIDE_LEFT;
@@ -78,6 +79,7 @@ function DestinationPage() {
           variants={SLIDE_LEFT}
           className="w-fit mx-auto mb-8 md:mx-0 md:-ml-10"
         ></motion.div>
+        
         <div className="grid gap-40 lg:grid-cols-2 lg:pt-12">
           <AnimatePresence>
             <motion.div
@@ -112,6 +114,7 @@ function DestinationPage() {
                 </div>
               ))}
             </div>
+
             <div className="text-secondary text-center lg:text-left">
               <h3 className="mt-5 uppercase text-white lg:text-[100px]">
                 {planets[actual].name}
