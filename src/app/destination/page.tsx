@@ -52,6 +52,7 @@ const planets = [
 ];
 
 function DestinationPage() {
+  // indexing
   const [actual, setActual] = useState(0);
   // npm i @mantine/hooks
   const previous = usePrevious(actual);
@@ -79,7 +80,7 @@ function DestinationPage() {
           variants={SLIDE_LEFT}
           className="w-fit mx-auto mb-8 md:mx-0 md:-ml-10"
         ></motion.div>
-        
+
         <div className="grid gap-40 lg:grid-cols-2 lg:pt-12">
           <AnimatePresence>
             <motion.div
@@ -94,6 +95,7 @@ function DestinationPage() {
               />
             </motion.div>
           </AnimatePresence>
+          {/* right side content */}
           <div>
             <div className="flex items-center justify-center text-secondary space-x-6 nav-text md:text-[16px] lg:justify-start">
               {planets.map(({ name }, index) => (
