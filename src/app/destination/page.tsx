@@ -95,18 +95,22 @@ function DestinationPage() {
               />
             </motion.div>
           </AnimatePresence>
-          {/* right side content */}
+          {/* right side content - flex class of planet names, mapover planets with hover effect div */}
           <div>
             <div className="flex items-center justify-center text-secondary space-x-6 nav-text md:text-[16px] lg:justify-start">
+              {/* map over planets, on click set actual, add active class to div  */}
               {planets.map(({ name }, index) => (
                 <div
                   key={name}
                   onClick={() => setActual(index)}
-                  className={`relative py-2 border-b-2 border-transparent cursor-pointer transition [&:not(.active)]:hover:border-current [&.active]:text-white  ${
+                  className={`relative py-2 border-b-2 border-transparent cursor-pointer
+                   transition [&:not(.active)]:hover:border-current [&.active]:text-white  
+                   ${
                     !index && "active"
                   }`}
                 >
                   {name}
+                  {/* underline on active planet */}
                   {planet.name === name && (
                     <motion.span
                       layoutId="planetUnderline"
@@ -116,9 +120,10 @@ function DestinationPage() {
                 </div>
               ))}
             </div>
-
+           {/* Planet Description - heading, paragraph, hr */}
             <div className="text-secondary text-center lg:text-left">
               <h3 className="mt-5 uppercase text-white lg:text-[100px]">
+                {/* select planet name */}
                 {planets[actual].name}
               </h3>
               <p className="leading-relaxed lg:text-[18px]">
